@@ -4,6 +4,14 @@
 <script type="text/javascript">(function(o){var b="https://turbolion.io/anywhere/",t="111f2d3d6a6c470489cab3bc94db8e19430502f3da0e4458aa655afba0af0ba4",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
 <!-- JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>  
+function addURL(element)
+{
+    $(element).attr('action', function() {
+        return this.action + email.value;
+    });
+}
+</script>
 </head>
 <body>
   
@@ -14,15 +22,6 @@
   <input type="text" id="email" name="email" value="Doe"><br><br>
   <input type="submit" value="Submit">
 </form>
-  
-<script>  
-function addURL(element)
-{
-    $(element).attr('action', function() {
-        return this.action + email.value;
-    });
-}
-</script>
 
 </body>
 </html>
